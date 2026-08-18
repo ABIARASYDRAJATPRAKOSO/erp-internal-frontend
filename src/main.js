@@ -1,17 +1,19 @@
 import { createApp } from 'vue'
-import './style.css' // Menjaga style bawaan sementara
+import './style.css' 
 import App from './App.vue'
+import router from './router'
 
-// Import PrimeVue dan konfigurasi temanya
+
 import PrimeVue from 'primevue/config'
 import Aura from '@primevue/themes/aura'
-import 'primeicons/primeicons.css' // Penting agar icon muncul
+import 'primeicons/primeicons.css' 
 
 const app = createApp(App)
 
+app.use(router) 
 app.use(PrimeVue, {
     theme: {
-        preset: Aura // Menggunakan tema default (Aura)
+        preset: Aura
     }
 })
 
